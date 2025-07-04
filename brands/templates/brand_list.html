@@ -31,8 +31,9 @@ SGE - Marcas
         <thead class="">
             <tr>
                 <th>ID</th>
-                <th>NOME</th>
-                <th>DESCRIÇÃO</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -41,6 +42,7 @@ SGE - Marcas
                 <td>{{brand.id}}</td>
                 <td>{{brand.name}}</td>
                 <td>{{brand.description}}</td>
+                <td><a href="{% url 'brand_detail' brand.id %}" class="btn btn-info btn-sm"><i class="bi bi-eye"></i></a></td>
             </tr>
             {% endfor %}
         </tbody>
