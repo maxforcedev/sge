@@ -7,14 +7,15 @@ SGE - Marcas
 
 {% block content %}
 <div class="container mt-4">
-    <h3 class="display-6">Atualizar Marca</h3>
+    <h3 class="display-6">Deletar Marca</h3>
 
     <div class="card">
         <div class="card-body">
-            <form method="post" class="form">
+            <p class="card-text">Tem certeza que deseja excluir a marca <strong>{{object.name}}</strong> ?</p>
+            <form method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Salvar</button>
+
+                <button type="submit" class="btn btn-danger">Deletar</button>
                 <a href="{% url 'brand_list' %}" class="btn btn-secondary">Voltar</a>
             </form>
         </div>
